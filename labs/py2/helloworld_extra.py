@@ -34,6 +34,38 @@ Nemo the Fish says:
 
 # Write your code here:
 
+class Animal(object):
+	def __init__(self, name):
+		self.name = name
+		self.type = 'Animal'
+		self.message = ''
+
+	def description(self):
+		return '{} the {}'.format(self.name, self.type)
+
+	def speak(self):
+		return self.message
+
+	def emote(self):
+		print '{} the {} says: {}'.format(self.name, self.type, self.message)
+
+class Dog(Animal):
+	def __init__(self, name):
+		self.name = name
+		self.type = 'Dog'
+		self.message = 'Woof!'
+
+class Cat(Animal):
+	def __init__(self, name):
+		self.name = name
+		self.type = 'Cat'
+		self.message = 'Meow!'
+
+class Fish(Animal):
+	def __init__(self, name):
+		self.name = name
+		self.type = 'Fish'
+		self.message = ''
 
 
 # Do not edit any code below this line!

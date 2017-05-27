@@ -31,8 +31,23 @@ passed-in keyword arguments.
 '''
 
 # Write your code here:
+def val_for_longest_key(**kwargs):
+	longest_key = 0
+	val = 0
+	for key, value in kwargs.items():
+		if len(key) > longest_key:
+			val = value
+			longest_key = len(key)
+	return val
 
-
+def key_for_biggest_value(**kwargs):
+	biggest_value = 0
+	k = 0
+	for key, value in kwargs.items():
+		if value > biggest_value:
+			biggest_value = value
+			k = key
+	return k
 
 # Do not edit any code below this line!
 
